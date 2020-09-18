@@ -6,8 +6,49 @@
     xmlns:local="clr-namespace:DesktopTool"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="800"
+    Width="280"
     Height="450"
+    AllowsTransparency="True"
+    MouseMove="WindowMouseMove"
+    ShowInTaskbar="False"
+    Topmost="True"
+    WindowStyle="None"
     mc:Ignorable="d">
-    <Grid />
+    <Canvas Background="Brown">
+        <TextBox
+            x:Name="Message"
+            Canvas.Left="20"
+            Canvas.Top="40"
+            Width="200"
+            Height="40"
+            MaxWidth="200"
+            TextWrapping="WrapWithOverflow" />
+        <Button
+            Canvas.Left="220"
+            Canvas.Top="40"
+            Width="40"
+            Height="40"
+            Click="AddItem">
+            add
+        </Button>
+        <Button
+            Canvas.Left="220"
+            Canvas.Top="10"
+            Width="40"
+            Height="25"
+            Click="Close">
+            Close
+        </Button>
+        <ScrollViewer
+            Canvas.Left="20"
+            Canvas.Top="100"
+            Width="240"
+            Height="320"
+            MaxHeight="320"
+            Background="#FF1E4363"
+            VerticalScrollBarVisibility="Hidden">
+
+            <StackPanel x:Name="List" />
+        </ScrollViewer>
+    </Canvas>
 </Window>
